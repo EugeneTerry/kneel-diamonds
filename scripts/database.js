@@ -77,7 +77,10 @@ export const addCustomOrder = () => {
     newOrder.id = database.customOrders[lastIndex].id + 1
 
     // Add a timestamp to the order
-    newOrder.timestamp = Date.now()
+    const d = new Date()
+    newOrder.timestamp = `${d.getMonth()+1}/${d.getDate()+1}/${d.getFullYear()} ${d.toLocaleTimeString()}`
+
+    //newOrder.timestamp = Date.now()
 
     // Add the new order object to custom orders state
     database.customOrders.push(newOrder)
