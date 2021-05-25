@@ -1,5 +1,5 @@
 import { KneelDiamonds } from "./KneelDiamonds.js"
-//import { Orders } from "./Orders.js"
+
 
 const mainContainer = document.querySelector("#container")
 
@@ -10,7 +10,7 @@ const renderAllHTML = () => {
 
 renderAllHTML()
 
-document.addEventListener("stateChanged", event => {
+document.addEventListener("stateChanged", () => {
     console.log("State of data has changed. Regenerating HTML...")
     renderAllHTML()
 })
