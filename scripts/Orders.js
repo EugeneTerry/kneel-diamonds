@@ -29,6 +29,7 @@ const buildOrderListItem = (order) => {
         currency: "USD"
     })
     const d = new Date()
+    
     return `<li>
         Order #${order.id} cost ${costString} date: ${d.getMonth()+1}/${d.getDate()+1}/${d.getFullYear()} ${d.toLocaleTimeString()}
     </li>`
